@@ -26,7 +26,7 @@ $(document).ready(function(){
 
     // typing animation script 
     var typed = new Typed(".typing", {
-        strings: ["Developer", "Designer", "Freelancer"],
+        strings: ["Web Design", "Web Development", "Web Security"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true

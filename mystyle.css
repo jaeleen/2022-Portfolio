@@ -220,7 +220,7 @@ section .title::after{
 }
 /* about section styling */
 .about .title::after{
-    content:"Who i am";
+    content:"About";
 }
 .about .about-content .left{
     width: 40%;
@@ -280,6 +280,7 @@ section .title::after{
 .projects .title::before{
     background: #fff;
 }
+
 
 .services .title::after,
 .projects .title::after{
@@ -481,6 +482,46 @@ section .title::after{
 .owl-dot:hover{
     background: #d4e2d4!important;
 }
+
+/* UI Design Section */
+.row {
+    margin: 8px -16px;
+  }
+  
+  /* Add padding BETWEEN each column */
+  .row,
+  .row > .column {
+    padding: 15px;
+  }
+  
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+  }
+  .content h3, h2, p{
+    color: #232323;
+  }
+  
+  /* Clear floats after rows */ 
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Content */
+  .content {
+    background-color: white;
+    padding: 10px;
+  }
+  .content h3{
+    color: #854C27;
+  }
+  .content p{
+    padding-top: 10px;
+  }
+
 
 /* contact section styling  */
 .contact .title::after{
@@ -707,3 +748,18 @@ img {
         font-size: 27px;
     }
 }
+
+/* Media responsive for UI design */
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+    .column {
+      width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
