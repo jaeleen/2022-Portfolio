@@ -622,6 +622,69 @@ section .title::after{
     background: none;
 }
 
+/* about project */
+.aboutproject {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.aboutproject h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.aboutproject p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.aboutproject ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.aboutproject ul ul {
+    list-style-type: circle;
+    margin-left: 20px;
+}
+
+.aboutproject li {
+    margin-bottom: 10px;
+}
+
+.aboutproject strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.aboutproject a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.aboutproject a:hover {
+    text-decoration: underline;
+}
+
+.aboutproject ul ul li {
+    margin-bottom: 8px;
+}
+
+.aboutproject h2 {
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+
 /* footer section styling starts  */
 footer{
     background: #EAEAEA;
@@ -630,6 +693,47 @@ footer{
     color: #111;
 }
 
+/* Button overlay on project styling */
+.poster-item {
+    position: relative; /* This allows the button to be positioned over the image */
+    width: 500px;
+    margin-right: 20px; /* Add spacing between items */
+    text-align: center; /* Center the text under the image */
+    flex-shrink: 0; /* Prevent the item from shrinking */
+    overflow: hidden; /* Hide any overflow (including the button when it's not visible) */
+}
+/* The overlay button */
+.overlay-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the button */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.3s ease; /* Smooth fade-in */
+    text-transform: uppercase;
+    z-index: 10; /* Ensure button is above the image */
+}
+
+/* Show the button on hover */
+.poster-item:hover .overlay-btn {
+    opacity: 1; /* Show the button */
+}
+
+/* Optional button hover styling */
+.overlay-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Slightly darker on hover */
+}
+
+/* Optional button focus styling for accessibility */
+.overlay-btn:focus {
+    outline: 2px solid white; /* Add an outline for keyboard accessibility */
+}
 /* responsive media querry start */
 @media (max-width: 1300px){
     .home .max-width{
